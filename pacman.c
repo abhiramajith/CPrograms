@@ -17,38 +17,35 @@ int main(void)
 
   if (diff_x > 0 && diff_y > 0)
     {
-      Go(diff_x);
+      printf("R ");
       printf("R ");
       Go(diff_y);
-      printf("R ");
+      printf("L ");
+      Go(diff_x);
 
     }
 
   if (diff_x > 0 && diff_y < 0)
     {
-      Go(diff_x);
-      printf("R ");
       Go(-diff_y);
-      printf("L ");
-
+      printf("R ");
+      Go(diff_x);
     }
 
   if (diff_x < 0 && diff_y > 0)
     {
-      Go(-diff_x);
+      printf("L ");
       printf("L ");
       Go(diff_y);
-      printf("L ");
-
+      printf("R ");
+      Go(-diff_x);
     }
 
   if (diff_x < 0 && diff_y < 0)
     {
-      Go(-diff_x);
-      printf("L ");
       Go(-diff_y);
-      printf("R ");
-
+      printf("L ");
+      Go(-diff_x);
     }
 
   printf("\n");
