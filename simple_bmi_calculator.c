@@ -11,7 +11,7 @@ int main (void)
   scanf("%d", &Weight );
 
   double BMI = Weight/(Height*Height);
-  printf("Your BMI is %f \n", BMI);
+  printf("Your BMI is %.1f \n", BMI);
 
   return 0;
 
