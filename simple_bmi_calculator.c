@@ -2,12 +2,17 @@
 
 int main (void)
 {
-  int Height;
+  double Height;
   int Weight;
 
-  printf("Please enter your height in cm:\n");
-  scanf("%d", &Height );
-  printf("Your height is %d cm\n", Height);
+  printf("Please enter your height in metres :\n");
+  scanf("%lf", &Height );
+  printf("Please enter your weight in kg:\n");
+  scanf("%d", &Weight );
+
+  double BMI = Weight/(Height*Height);
+  printf("Your BMI is %f \n", BMI);
+
   return 0;
 
 
