@@ -6,9 +6,15 @@ int main(void)
 
   for(day = 1; day <= 12; day = day + 1)
     {
-      printf("On the %d day of Christmas, ", day);
-      printf("my true love gave to me\n");
+      if(day == 1) printf("On the first day of Christmas, ");
+      else if(day == 2)
+        printf("On the second day of Christmas, ");
+      else if(day == 3)
+        printf("On the third day of Christmas, ");
+      else if(day == 4)
+        printf("On the fourth day of Christmas, ");
 
+      printf("my true love gave to me\n");
       for(i = day; i > 0; i = i - 1)
         {
           if(i == 1)
