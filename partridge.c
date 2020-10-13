@@ -13,7 +13,22 @@ int main(void)
         printf("On the third day of Christmas, ");
       else if(day == 4)
         printf("On the fourth day of Christmas, ");
-
+      else if(day == 5)
+        printf("On the fifth day of Christmas, ");
+      else if(day == 6)
+        printf("On the sixth day of Christmas, ");
+      else if(day == 7)
+        printf("On the seventh day of Christmas, ");
+      else if(day == 8)
+        printf("On the eighth day of Christmas, ");
+      else if(day == 9)
+        printf("On the nineth day of Christmas, ");
+      else if(day == 10)
+        printf("On the tenth day of Christmas, ");
+      else if(day == 11)
+        printf("On the eleventh day of Christmas, ");
+      else if(day == 12)
+        printf("On the twelveth day of Christmas, ");
       printf("my true love gave to me\n");
       for(i = day; i > 0; i = i - 1)
         {
@@ -30,7 +45,7 @@ int main(void)
           else if(i == 4)
             printf("Four calling birds,\n");
           else if(i == 5)
-            printf("Five golden rings,\n");
+            printf("Five gold rings,\n");
           else if(i == 6)
             printf("Six geese a laying,\n");
           else if(i == 7)
