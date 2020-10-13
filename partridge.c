@@ -4,10 +4,11 @@ int main(void)
 {
   int day, i;
 
-  for(day = 1; day <= 3; day = day + 1)
+  for(day = 1; day <= 4; day = day + 1)
     {
       printf("On the %d day of Christmas, ", day);
       printf("my true love gave to me\n");
+
       for(i = day; i > 0; i = i - 1)
         {
           if(i == 1)
@@ -20,6 +21,9 @@ int main(void)
             printf("Two turtledoves,\n");
           else if(i == 3)
             printf("Three French hens,\n");
+          else if(i == 4)
+            printf("Four calling birds,\n");
+
     }
     printf("\n");
   }
