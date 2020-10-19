@@ -23,6 +23,9 @@ scanf("%lf", &b);
 printf("Please enter the value for coefficient c:");
 scanf("%lf", &c);
 
+double r1 = -b + sqrt((pow(b,2))-(4.0*a*c))/(2.0*a);
+printf("%f", r1);
+
 double discriminant = (b*b)-(4*a*c);
 if (discriminant > 0) {
   printf("The number of real roots is 2.");
