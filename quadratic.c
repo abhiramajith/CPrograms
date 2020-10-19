@@ -24,17 +24,20 @@ printf("Please enter the value for coefficient c:");
 scanf("%lf", &c);
 
 double r1 = (-b + sqrt(pow(b,2)-4.0*a*c))/(2.0*a);
-printf("%f", r1);
+double r2 = (-b - sqrt(pow(b,2)-4.0*a*c))/(2.0*a);
 
 double discriminant = (b*b)-(4*a*c);
 if (discriminant > 0) {
-  printf("The number of real roots is 2.");
+  printf("The number of real roots is 2.\n");
+  printf("The value of the first root is  %f.\n", r1);
+  printf("The value of the second root is  %f.\n", r2);
 }
 else if (discriminant < 0){
   printf("The number of real roots is 0.");
 }
 else if (discriminant == 0){
-  printf("The number of real roots is 1.");
+  printf("The number of real roots is 1.\n");
+  printf("The value of the first root is  %f.\n", r1);
 }
 
 
