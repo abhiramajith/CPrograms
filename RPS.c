@@ -25,9 +25,14 @@ printf("Please choose 1 for ROCK, 2 for PAPER or 3 for SCISSORS.\n");
 
 
 
-scanf("%d", &userInput);
+label : scanf("%d", &userInput);
 
+if (userInput < 0 || userInput>3){
+  printf("Invalid Input!\n");
+  printf("Please choose 1 for ROCK, 2 for PAPER or 3 for SCISSORS.\n");
+  goto label;
 
+}
 if (userInput == 1){
   printf("User choice is ROCK.\n");
 }
