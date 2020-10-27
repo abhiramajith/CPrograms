@@ -13,9 +13,47 @@ int main(void)
 
   srand(seed);
 
+printf("Please choose 1 for ROCK, 2 for PAPER or 3 for SCISSORS.\n");
   for (i=0; i<10; i++) {
 
     randNum = rand()%3+1;
-    printf("A random number between 1 and 3: %d\n", randNum );
-  }
+
+
+  int userInput;
+  int computerInput = randNum;
+
+
+
+scanf("%d", &userInput);
+
+
+
+if (userInput == 1){
+  printf("User choice is ROCK.\n");
+}
+if (userInput == 2){
+  printf("User choice is PAPER.\n");
+}
+if (userInput == 3){
+  printf("User choice is SCISSORS.\n");
+}
+
+
+if (computerInput == 1){
+  printf("Computer choice is ROCK.\n");
+}
+if (computerInput == 2){
+  printf("Computer choice is PAPER.\n");
+}
+if (computerInput == 3){
+  printf("Computer choice is SCISSORS.\n");
+}
+
+
+
+
+
+}
+
+  return 0;
 }
