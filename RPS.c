@@ -7,6 +7,7 @@ int main(void)
   int randNum;
   int seed;
 
+
   printf("Enter a seed for the random number generator.\n");
 
   scanf("%d", &seed);
@@ -25,7 +26,6 @@ printf("Please choose 1 for ROCK, 2 for PAPER or 3 for SCISSORS.\n");
 
 
 scanf("%d", &userInput);
-
 
 
 if (userInput == 1){
@@ -49,6 +49,17 @@ if (computerInput == 3){
   printf("Computer choice is SCISSORS.\n");
 }
 
+
+
+if (userInput == 1 && computerInput == 1){
+  printf("It's a draw. Computer chose ROCK and User also chose ROCK.\n");
+}
+if (userInput == 2 && computerInput == 2){
+  printf("It's a draw. Computer chose PAPER and User also chose PAPER.\n");
+}
+if (userInput == 3 && computerInput == 3){
+  printf("It's a draw. Computer chose SCISSORS and User also chose SCISSORS.\n");
+}
 
 
 
