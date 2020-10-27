@@ -62,7 +62,33 @@ if (userInput == 3 && computerInput == 3){
 }
 
 
+if (userInput == 1 && computerInput == 3){
+  printf("User wins because ROCK beats SCISSORS.\n");
 
+}
+if (userInput == 2 && computerInput == 1){
+  printf("User wins because PAPER beats ROCK.\n");
+
+}
+if (userInput == 3 && computerInput == 2){
+  printf("User wins because SCISSORS beats PAPER.\n");
+
+}
+
+
+
+if (userInput == 3 && computerInput == 1){
+  printf("COMPUTER wins because ROCK beats SCISSORS.\n");
+
+}
+if (userInput == 1 && computerInput == 2){
+  printf("COMPUTER wins because PAPER beats ROCK.\n");
+
+}
+if (userInput == 2 && computerInput == 3){
+  printf("COMPUTER wins because SCISSORS beats PAPER.\n");
+
+}
 
 }
 
