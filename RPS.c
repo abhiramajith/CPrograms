@@ -6,7 +6,8 @@ int main(void)
   int i;
   int randNum;
   int seed;
-
+  int userWins = 0;
+  int compWins = 0;
 
   printf("Enter a seed for the random number generator.\n");
 
@@ -69,33 +70,33 @@ if (userInput == 3 && computerInput == 3){
 
 if (userInput == 1 && computerInput == 3){
   printf("User wins because ROCK beats SCISSORS.\n");
-
+  userWins++;
 }
 if (userInput == 2 && computerInput == 1){
   printf("User wins because PAPER beats ROCK.\n");
-
+  userWins++;
 }
 if (userInput == 3 && computerInput == 2){
   printf("User wins because SCISSORS beats PAPER.\n");
-
+  userWins++;
 }
 
 
 
 if (userInput == 3 && computerInput == 1){
   printf("COMPUTER wins because ROCK beats SCISSORS.\n");
-
+  compWins++;
 }
 if (userInput == 1 && computerInput == 2){
   printf("COMPUTER wins because PAPER beats ROCK.\n");
-
+  compWins++;
 }
 if (userInput == 2 && computerInput == 3){
   printf("COMPUTER wins because SCISSORS beats PAPER.\n");
-
+  compWins++;
 }
 
 }
-
+printf("In 10 games, computer won %d times and user won %d times\n", compWins, userWins );
   return 0;
 }
