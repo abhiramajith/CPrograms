@@ -18,7 +18,7 @@ int main(void){
 
    digit = 0;
    Num = n;
-   count = 0;
+   count = -1;
 for(i = 0;Num > 0; i++){
 
   digit = Num % 2;
@@ -30,10 +30,12 @@ for(i = 0;Num > 0; i++){
 }
 
 printf("%d\n", count);
-for (i = 0 ; count > -1 ; i++ ){
+for (i = 0 ; count > -1; i++ ){
   temp = a[i];
-  a[i] =a[count - 1];
-  a[count - 1] = t
+  a[i] = a[count];
+  a[count] = temp;
+  count--;
+  printf("%d", a[i]);
 }
 return 0;
 }
