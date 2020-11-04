@@ -10,15 +10,19 @@
  */
 
 int main(void){
-  int count, n, Num, digit, i, temp;
-  int a[size], b[size];
+  int count, n, Num, digit, i;
+  int a[size];
 
-  printf("Enter a number in base 10:\n");
+
   scanf("%d", &n);
 
    digit = 0;
    Num = n;
    count = -1;
+
+   if (n == 0){
+     printf("0");
+   }
 for(i = 0;Num > 0; i++){
 
   digit = Num % 2;
@@ -26,16 +30,12 @@ for(i = 0;Num > 0; i++){
   count ++ ;
   Num = Num / 2;
 
-  printf("%d", a[i]);
 }
 
-printf("%d\n", count);
-for (i = 0 ; count > -1; i++ ){
-  temp = a[i];
-  a[i] = a[count];
-  a[count] = temp;
-  count--;
+printf("%d ", n);
+for (i = count ; i >= 0; i-- ){
   printf("%d", a[i]);
+
 }
 return 0;
 }
