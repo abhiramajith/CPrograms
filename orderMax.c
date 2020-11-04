@@ -3,29 +3,24 @@
 int main(void) {
 
     double w, x, y, z;
+    double temp;
     /* you may need some extra variables - but NO arrays please! */
 
     /* Do not change the following input statement */
     scanf("%lf%lf%lf%lf", &w,&x,&y,&z);
 
     /* Enter your solution here */
-    if (w >= x && w >= y && w >= z) {
-      a = w;
-    }
+ if (w < x){
+   temp = w;
+   w = x;
+   x = temp;
+ }
 
-    if ( x>= w && x >= y && x >= z){
-      a = x;
-    }
-
-    if ( y>= w && y >= x && y >= z){
-      a = y;
-    }
-
-    if ( z>= w && z >= x && z >= y){
-      a = z;
-    }
-
-
+ if (x < y){
+   temp = x;
+   x = y
+   y = temp;
+ }
 
 
 
