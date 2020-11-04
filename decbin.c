@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define size 10
+#define size 30
  /*
  Name: Abhiram Ajith - 20364441
  Date: 03/11/2020
@@ -10,6 +10,7 @@
  */
 
 int main(void){
+
   int count, n, Num, digit, i;
   int a[size];
 
@@ -21,7 +22,7 @@ int main(void){
    count = -1;
 
    if (n == 0){
-     printf("0");
+     printf("0 ");
    }
 for(i = 0;Num > 0; i++){
 
