@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define size 30
+#define size 8
  /*
  Name: Abhiram Ajith - 20364441
  Date: 03/11/2020
@@ -15,16 +15,19 @@ int main(void){
 
   printf("Enter a number in base 10:\n");
   scanf("%d", &n);
-
+   i = 0;
    digit = 0;
    Num = n;
-while (Num > 1){
-  Num = floor(Num / 2);
+while (Num >= 1){
   digit = Num % 2;
-  for(i = 0 ; i < size ; i++){
-    a[i] = digit;
-  }
-  printf("%d ", a[i]);
+  printf("%d\n", digit);
+  Num = Num / 2;
+  printf("%d\n", Num);
+  a[i] = digit;
+  i = i + 1;
 }
+printf("%d", a[i]);
+
+
 return 0;
 }
