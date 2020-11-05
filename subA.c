@@ -12,6 +12,7 @@ int main(void)
   int sum2 = 0;
   int sum3 = 0;
   int count;
+  char x[N];
 
   /* read in the array */
   scanf("%d", &N);
@@ -23,7 +24,7 @@ int main(void)
     printf("%d ", a[i]);
 }
 
-if (N == 0){
+if (N < 1){
   sum = 0;
   goto label;
 }
@@ -34,6 +35,7 @@ for (i = 1;i < N; i++ ){
 
   if (sum<a[i]){
     sum = a[i];
+
   }
 }
 
@@ -44,9 +46,7 @@ for (i = 0;i < N; i++ ){
   if(i < N-1 && a[i] + a[i+1] > sum){
     sum = a[i] + a[i+1];
 }
-  if (i < N-2 && a[i] + a[i+1] + a[i+2] > sum ){
-    sum = a[i] + a[i+1] + a[i+2];
-  }
+
 
 
   sum2 += a[i];
@@ -64,7 +64,13 @@ for (i = N-1;i > 0; i-- ){
 
   }
 }
-label: printf("\nLargest sum is %d obtained from the subsequence [  ] ", sum);
+label: printf("\nLargest sum is %d obtained from the subsequence [ ", sum);
+for (i = 0;i < N; i++ ){
 
+
+printf(" %d", b[i]);
+
+}
+printf(" ]");
   return 0;
 }
