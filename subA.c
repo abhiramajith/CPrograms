@@ -9,8 +9,9 @@ int main(void)
   int N;
   int i;
   int sum;
-  int sum2;
-  int sum3;
+  int sum2 = 0;
+  int sum3 = 0;
+  int count;
 
   /* read in the array */
   scanf("%d", &N);
@@ -22,6 +23,10 @@ int main(void)
     printf("%d ", a[i]);
 }
 
+if (N == 0){
+  sum = 0;
+  goto label;
+}
 
 sum = a[0];
 
@@ -55,14 +60,16 @@ for (i = 0;i < N; i++ ){
   }
 }
 
+
+
 for (i = N-1;i > 0; i-- ){
   sum3 += a[i];
   if (sum3 > sum){
     sum = sum3;
-    printf("\n%dfor5", sum);
+
   }
 }
-printf("\n%d", sum);
+label: printf("\nLargest sum is %d obtained from the subsequence [  ] ", sum);
 
   return 0;
 }
