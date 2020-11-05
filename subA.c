@@ -34,8 +34,6 @@ for (i = 1;i < N; i++ ){
 
   if (sum<a[i]){
     sum = a[i];
-
-    printf("\n%dlargest", sum);
   }
 }
 
@@ -45,18 +43,15 @@ for (i = 1;i < N; i++ ){
 for (i = 0;i < N; i++ ){
   if(i < N-1 && a[i] + a[i+1] > sum){
     sum = a[i] + a[i+1];
-    printf("\n%dfor2", sum);
 }
   if (i < N-2 && a[i] + a[i+1] + a[i+2] > sum ){
     sum = a[i] + a[i+1] + a[i+2];
-    printf("\n%dfor3", sum);
   }
 
 
   sum2 += a[i];
   if (sum2 > sum){
     sum = sum2;
-    printf("\n%dfor4", sum);
   }
 }
 
