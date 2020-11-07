@@ -8,6 +8,7 @@ int main(void)
   int a[MAX_SIZE];
   int N;
   int i,j;
+  int x1,x2;
   int sum, sumMax;
 
   /* read in the array */
@@ -28,7 +29,10 @@ int main(void)
 
       if (sum > sumMax){
         sumMax = sum;
+        x1 = i;
+        x2 = j;
         printf("%d\n", sumMax);
+        printf("%d\n", a[i]);
       }
 
     }
