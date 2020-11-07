@@ -24,11 +24,16 @@ int main(void)
 
     for (j=i;j<N;j++){
       sum+= a[j];
-      printf("%d\n", sum);
+
+
+      if (sum > sumMax){
+        sumMax = sum;
+        printf("%d\n", sumMax);
+      }
 
     }
   }
 
-printf("\nLargest sum is %d obtained from the subsequence [] ", sum);
+printf("\nLargest sum is %d obtained from the subsequence [] ", sumMax);
 return 0;
 }
