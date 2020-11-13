@@ -42,3 +42,5 @@ if (x < y){
 
     /* Do not change the following output statement */
     printf("%.1f %.1f %.1f %.1f\n",w, x, y, z);
+  return 0;
+}
