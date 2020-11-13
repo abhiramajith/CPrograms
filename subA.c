@@ -8,9 +8,9 @@ int main(void)
   int N;
   int i, j, k;//
   int x1, x2;// These variables hold the values of i and j for printing out the correct sub array
-  int sum ;//holds the value of the largest continous sub array
+  int sum ;//holds the sum of the largest possible subarray
   int aLargest; //holds the value of the largest number in the array
-  int sumMax;//
+  int sumMax;//holds the value of largest continous sub array
 
   /* read in the array */
   scanf("%d", &N);
@@ -36,7 +36,7 @@ int main(void)
   sumMax = a[0];
   aLargest = a[0];
 
-  for (i = 1;i < N; i++ ){
+  for (i = 1;i < N; i++ ){//This for loop calculates the largest number in the array
 
     if (aLargest<a[i]){
       aLargest = a[i];
@@ -44,17 +44,17 @@ int main(void)
   }
 
 
-  for (i=0;i<N;i++){
+  for (i=0;i<N;i++){//This for loop takes one element from the array at a tim
     sum = 0;
 
-    for (j=i;j<N;j++){
+    for (j=i;j<N;j++){//This for loop sums the different possible sub arrays
       sum+= a[j];
 
 
       if (sum > sumMax){
         sumMax = sum;
-        x1 = i;
-        x2 = j;
+        x1 = i;//notes the ith value of the array
+        x2 = j;//notes the jth value of the array
 
       }
 
@@ -63,16 +63,16 @@ int main(void)
 
 if ( sumMax > aLargest){
 printf("\nLargest sum is %d obtained from the subsequence [", sumMax);
-for (k=x1;k<=x2;k++){
+for (k=x1;k<=x2;k++){//This for loop prints the numbers corresponding to the largest sub array
   printf(" %d", a[k]);
 
 }
 printf(" ]");
 }
 
-
+//if the largest sub array is less than the largest value in the array the largest value is printed
 else{
-  printf("\nLargest sum is %d obtained from the subsequence [ %d ]", sumLargest, sumLargest);
+  printf("\nLargest sum is %d obtained from the subsequence [ %d ]", aLargest, aLargest);
 }
 return 0;
 }
