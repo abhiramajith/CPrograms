@@ -7,9 +7,11 @@
 int main(void)
 
 {
-
+  int i;
+  int j;
   int a[MAX_SIZE];
   int N;
+  int temp;
 
   int L;  /* the current size of the list */
 
@@ -23,8 +25,25 @@ int main(void)
     } while (N<3 || N>MAX_SIZE+2);
 
   /* write your solution here ... */
+  L=N-2;
+  int b[MAX_SIZE];
 
+for(i=1;i<L;i++){
+  a[0]=2;
+  a[i]=i+2;
+}
 
+for(i=0;i<L;i++){
+  for(j=i+1;j<L-1;j++){
+    if (a[j+1]%a[i]==0){
+      temp = a[j+1];
+      a[j+1]=a[j+2];
+      a[j+2]=temp;
+  L--;
+    }
+
+    }
+  }
 
 
 
