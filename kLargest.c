@@ -72,7 +72,6 @@ int main(void)
         b[maxindx] = temp;
 
       }
-      printf("%d\n",count );
       if (count<=k){
         printf("The array does not contain %d numbers less than %.5lf\n",k,threshold );
       }
