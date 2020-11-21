@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+/*
+Name: Abhiram Ajith - 20364441
+Date: 17/11/2020
+Title: A program that displays the kth largest value in an array that is less than some threshold value.
+Expected output: The kth largest value in the floats.txt  file that is less than the threshold.
+*/
 
 #define MAX_SIZE 5000
 
@@ -28,12 +34,14 @@ int main(void)
   /* write your solution here */
   int count=0;
 
+//This loop filters all the values in a les than the threshold into the array b
     for(h=0;h<N+1;h++){
       if (a[h]<threshold){
         b[h]=a[h];
         count++;
       }
     }
+
     /* Run the outer loop k times, each time around the outer loop
          the (j+1)th largest value is found and placed in position j
          of the loop */
