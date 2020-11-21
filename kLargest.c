@@ -34,7 +34,7 @@ int main(void)
   /* write your solution here */
   int count=0;
 
-//This loop filters all the values in a les than the threshold into the array b
+//This loop filters all the values in a[] less than the threshold into the array b
     for(h=0;h<N+1;h++){
       if (a[h]<threshold){
         b[h]=a[h];
