@@ -11,8 +11,6 @@ int main(void)
   int j;
   int a[MAX_SIZE];
   int N;
-  int temp;
-
   int L;  /* the current size of the list */
 
    /* read in the upper limit. Keep reading until
@@ -26,26 +24,24 @@ int main(void)
 
   /* write your solution here ... */
   L=N-2;
-  int b[MAX_SIZE];
+  int k ;
 
-for(i=1;i<L;i++){
-  a[0]=2;
+for(i=0;i<N-2;i++){
   a[i]=i+2;
 }
 
-for(i=0;i<L;i++){
-  for(j=i+1;j<L-1;j++){
-    if (a[j+1]%a[i]==0){
-      temp = a[j+1];
-      a[j+1]=a[j+2];
-      a[j+2]=temp;
-  L--;
+for (i=0;i<L;i++){
+  k=i+1;
+  for (j=i+1;j<L;j++){
+    if (a[j]%a[i]!=0){
+      a[k]=a[j];
+
+      k++;
     }
 
     }
+L=k;
   }
-
-
 
 
   /* write out the result  - DO NOT CHANGE THIS */
