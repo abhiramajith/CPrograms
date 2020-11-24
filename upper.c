@@ -10,9 +10,9 @@ int main(void)
 
   /* complete your answer here */
   int i;
- for (i=0;i<MAX_MSG_SIZE; i++){
-   if (msg[i] >= 'a' && msg[i]<= 'z' && msg[i]!='\0'){
-     msg[i]= msg[i] - 32;
+ for (i=0; msg[i]!= '\0'; i++){
+   if (msg[i] >= 'a' && msg[i]<= 'z'){
+     msg[i]-= 32;
    }
  }
  printf("%s", msg);
