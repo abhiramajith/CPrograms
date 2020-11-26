@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main(void)
 {
@@ -7,7 +8,7 @@ int main(void)
   int n;  /* The number of lengths */
   int x; /* The target length */
   int *lengths; /* The array of available lengths */
-  int i;
+  int i, j;
   int whichfile=1;
 
   FILE *fp;
@@ -56,22 +57,25 @@ int main(void)
   /* Now all the input data has been read in
      search for the required pair of lengths... */
      int Nano_x;
+     bool found = false;
+
 
      Nano_x= x*10000000;
-     for(i=0;i<n;i++){
-       if ((lengths[i] + lengths[n-1])>Nano_x){
-         printf("%d + %d = %d\n", lengths[i], lengths[n-1], lengths[i]+lengths[n-1] );
-         n=n-1;
-       }
-       if ((lengths[i] + lengths[n-1])<Nano_x ){
-          printf("%d + %d = %d\n", lengths[i], lengths[n-1], lengths[i]+lengths[n-1] );
-          i++;
-       }
-       if ((lengths[i] + lengths[n-1])==Nano_x) {
-         printf("FOND3\n");
-       }
+     for (i=0;i<n;i++){
+         for (j=n-1;j>=0;j--){
+           if ((lengths[i] + lengths[j])==Nano_x) {
+             printf("Found: %d + %d == %d\n", lengths[i], lengths[j], lengths[i]+lengths[j] );
+             found = true;
+             return -1;
+           }
+
+         }
+
        }
 
+      if (!found){
+        printf("No matching pair found\n");
+       }
 
 
 
