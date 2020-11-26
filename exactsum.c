@@ -57,18 +57,17 @@ int main(void)
   /* Now all the input data has been read in
      search for the required pair of lengths... */
      int Nano_x;
-     bool found = false;
-
-
      Nano_x= x*10000000;
-     i=0;
-     j=n;
-     while (!found){
-       if ((lengths[i] + lengths[j])==Nano_x) {
+     i = 0;
+     j = n-1;
+
+     while (i < j){
+       if ((lengths[i] + lengths[j])==Nano_x){
          printf("Found: %d + %d == %d\n", lengths[i], lengths[j], lengths[i]+lengths[j] );
-         found = true;
+         return -1;
        }
-       else if ((lengths[i] + lengths[j]) < Nano_x){
+
+       if ((lengths[i] + lengths[j]) < Nano_x){
          i++;
        }
        else{
@@ -76,8 +75,14 @@ int main(void)
        }
      }
 
-    /* for (i=0;i<n;i++){
-         for (j=n;j>=0;j--){
+     printf("No matching pair found\n");
+
+
+
+
+     /*
+     for (i=0;i<n;i++){
+         for (j=n-1;j>=0;j--){
            if ((lengths[i] + lengths[j])==Nano_x) {
              printf("Found: %d + %d == %d\n", lengths[i], lengths[j], lengths[i]+lengths[j] );
              found = true;
@@ -91,7 +96,8 @@ int main(void)
       if (!found){
         printf("No matching pair found\n");
        }
-*/
+       */
+
 
 
   /* finished work, so free up the dynamic array
