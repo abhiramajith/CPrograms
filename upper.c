@@ -12,7 +12,7 @@ int main(void)
   int i;
  for (i=0; msg[i]!= '\0'; i++){
    if (msg[i] >= 'a' && msg[i]<= 'z'){
-     msg[i]-= 32;
+     msg[i]+= 'A'-'a';
    }
  }
  printf("%s", msg);
