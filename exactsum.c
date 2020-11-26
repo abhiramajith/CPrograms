@@ -61,8 +61,23 @@ int main(void)
 
 
      Nano_x= x*10000000;
-     for (i=0;i<n;i++){
-         for (j=n-1;j>=0;j--){
+     i=0;
+     j=n;
+     while (!found){
+       if ((lengths[i] + lengths[j])==Nano_x) {
+         printf("Found: %d + %d == %d\n", lengths[i], lengths[j], lengths[i]+lengths[j] );
+         found = true;
+       }
+       else if ((lengths[i] + lengths[j]) < Nano_x){
+         i++;
+       }
+       else{
+         j--;
+       }
+     }
+
+    /* for (i=0;i<n;i++){
+         for (j=n;j>=0;j--){
            if ((lengths[i] + lengths[j])==Nano_x) {
              printf("Found: %d + %d == %d\n", lengths[i], lengths[j], lengths[i]+lengths[j] );
              found = true;
@@ -76,7 +91,7 @@ int main(void)
       if (!found){
         printf("No matching pair found\n");
        }
-
+*/
 
 
   /* finished work, so free up the dynamic array
