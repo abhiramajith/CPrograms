@@ -22,7 +22,7 @@ int main(void)
   Date: 24/11/2020
   Title: A program that finds a value in an integer array of length N that
         occurs at least (N/2 + 1) times, if it exists.
-  Expected output:  [8 2 3 2 2 2 3 2 1] should return "2 appears more than 4 times in the array"
+  Expected output:[8 2 3 2 2 2 3 2 1] should return "2 appears more than 4 times in the array"
   */
 
   int unique_vals[MAX_SIZE], counts[MAX_SIZE];// unique_vals[] holds the unique values in an array and counts[] holds the frequency of each value in the array
