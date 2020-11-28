@@ -17,8 +17,16 @@ int main(void)
 
 
   /* fill in your answer here ... */
-  int unique_vals[MAX_SIZE], counts[MAX_SIZE];
-  bool counted[MAX_SIZE];
+  /*
+  Name: Abhiram Ajith - 20364441
+  Date: 24/11/2020
+  Title: A program that finds a value in an integer array of length N that
+        occurs at least (N/2 + 1) times, if it exists.
+  Expected output:  [8 2 3 2 2 2 3 2 1] should return "2 appears more than 4 times in the array"
+  */
+
+  int unique_vals[MAX_SIZE], counts[MAX_SIZE];// unique_vals[] holds the unique values in an array and counts[] holds the frequency of each value in the array
+  bool counted[MAX_SIZE];//boolean array that keeps track of what elements have beem entered into unique_vals[]
   int j;
   int unique_num=0;
   int x;
