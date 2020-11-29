@@ -51,16 +51,15 @@ int main(void)
   }
 
   for (i=0; i<unique_num;i++){
-    if (counts[i]>=((N/2)+1)){
+    if (counts[i]> N/2){
       printf("%d appears more than %d times in the array.\n", unique_vals[i], N/2 );
-      return -1;
-    }
-    else{
-      printf("No value appears more than %d times in the array.\n", N/2);
       return -1;
     }
 
   }
+
+  printf("No value appears more than %d times in the array.\n", N/2);
+
 
   return 0;
 }
