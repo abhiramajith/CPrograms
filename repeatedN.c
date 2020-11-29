@@ -50,14 +50,15 @@ int main(void)
     }
   }
 
-  for (i=0; i<unique_num;i++){
-    if (counts[i]> N/2){
+  for (i=0; i<unique_num;i++){// This loops for the size of unique numbers in the array
+    if (counts[i]> N/2){// If there is a number that appears more than N/2 times print the following
       printf("%d appears more than %d times in the array.\n", unique_vals[i], N/2 );
       return -1;
     }
 
   }
 
+//if there is no number this is printed
   printf("No value appears more than %d times in the array.\n", N/2);
 
 
