@@ -12,12 +12,18 @@ int main(void)
   fgets(msg, MAX_STR_LEN, stdin);
 
   /* write your answer here */
-  int i;
-  for (i=0; i<MAX_STR_LEN;i++){
-    msg[i]=perm[i];
+  int i=0;
+  int x ;
+  while (msg[i]!= '\0'){
+    if (msg[i] >= 'a' && msg[i]<= 'z'){
+    x=  msg[i] - 'a';
+    msg[i]=perm[x];
+    }
+    
+    i++;
   }
-}
 
-printf("%s\n", msg);
+
+printf("%s", msg);
   return 0;
 }
