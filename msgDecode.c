@@ -14,15 +14,15 @@ int main(void)
   /* write your answer here */
   int i=0;
   int j;
-  int x, y;
+  int x;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
       for (j=0;perm[j]!= '\0'; j++){
         if (perm[j]==msg[i]){
-          y=j;
+          x=j;
         }
       }
-      msg[i]= 'a'+ y;
+      msg[i]= 'a'+ x;
 
     }
 
@@ -30,10 +30,10 @@ int main(void)
       msg[i]+= 'a'-'A';
       for (j=0;perm[j]!= '\0'; j++){
         if (perm[j]==msg[i]){
-          y=j;
+          x=j;
         }
       }
-  msg[i]= 'A'+ y;
+  msg[i]= 'A'+ x;
     }
     i++;
   }
