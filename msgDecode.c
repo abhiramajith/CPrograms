@@ -16,7 +16,7 @@ int main(void)
   Name: Abhiram Ajith - 20364441
   Date: 01/12/2020
   Title:  A program that decodes a message that has been encoded using a permutation array of the alphabet.
-  Expected output: 'Bicyik fibbqai' should 'Secret message'
+  Expected output: 'Bicyik fibbqai' should return 'Secret message'
   */
 
   int i=0;//used to iterate through msg[]
@@ -30,7 +30,7 @@ int main(void)
           x=j;
         }
       }
-      msg[i]= 'a'+ x;//adds x to 'a' which will give the corresponding letter in the alphabet in lowercase and assign it to msg[i]    
+      msg[i]= 'a'+ x;//adds x to 'a' which will give the corresponding letter in the alphabet in lowercase and assign it to msg[i]
 
     }
 
