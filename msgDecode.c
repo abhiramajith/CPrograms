@@ -13,11 +13,12 @@ int main(void)
 
   /* write your answer here */
   int i=0;
-  int x ;
+  int x, y ;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
-    x=  msg[i] - 'a';
-    msg[i]=perm[x];
+    x=  msg[i] ;
+    y = msg[i] + perm[x];
+
     }
 
     else if (msg[i] >= 'A' && msg[i]<= 'Z'){
@@ -28,6 +29,7 @@ int main(void)
   }
 
 
-printf("%s", msg);
+printf("%d\n", x);
+printf("%d\n", y);
   return 0;
 }
