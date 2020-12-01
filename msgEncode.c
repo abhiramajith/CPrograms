@@ -14,7 +14,6 @@ int main(void)
   /* write your answer here */
   int i=0;
   int x ;
-  int temp;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
     x=  msg[i] - 'a';
@@ -23,9 +22,7 @@ int main(void)
 
     else if (msg[i] >= 'A' && msg[i]<= 'Z'){
     x=  msg[i] - 'A';
-    temp = x;
-    perm[temp]+= 'A'-'a';
-    msg[i]=perm[temp];
+    msg[i]=perm[x] + 'A'-'a';
     }
     i++;
   }
