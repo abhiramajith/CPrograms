@@ -13,11 +13,17 @@ int main(void)
 
   /* write your answer here */
   int i=0;
+  int j;
   int x, y ;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
-    x=  msg[i] ;
-    y = msg[i] + perm[x];
+    x=   msg[i];
+      for (j=0;perm[j]!= '\0'; j++){
+        if (perm[j]==msg[i]){
+          y=j;
+        }
+      }
+      msg[i]= msg[x+y];
 
     }
 
