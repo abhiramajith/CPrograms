@@ -19,7 +19,12 @@ int main(void)
     x=  msg[i] - 'a';
     msg[i]=perm[x];
     }
-    
+
+    if (msg[i] >= 'A' && msg[i]<= 'Z'){
+    x=  msg[i] - 'A';
+    perm[x]+= 'A'-'a';
+    msg[i]=perm[x];
+    }
     i++;
   }
 
