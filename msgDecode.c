@@ -14,7 +14,7 @@ int main(void)
   /* write your answer here */
   int i=0;
   int j;
-  int x, y, z ;
+  int x, y;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
       for (j=0;perm[j]!= '\0'; j++){
@@ -27,15 +27,18 @@ int main(void)
     }
 
     else if (msg[i] >= 'A' && msg[i]<= 'Z'){
-    x=  msg[i] - 'A';
-    msg[i]=perm[x] + 'A'-'a';
+      msg[i]+= 'a'-'A';
+      for (j=0;perm[j]!= '\0'; j++){
+        if (perm[j]==msg[i]){
+          y=j;
+        }
+      }
+  msg[i]= 'A'+ y;
     }
     i++;
   }
 
 
-printf("%d\n", x);
-printf("%d\n", y);
 printf("%s\n", msg);
   return 0;
 }
