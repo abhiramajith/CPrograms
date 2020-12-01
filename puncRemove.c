@@ -12,9 +12,10 @@ int main(void)
   int j;
 while (msg[i]!= '\0'){
   if (msg[i] == '!' || msg[i] == '`' ||  msg[i] == '?' ||  msg[i] == ';' || msg[i] == ':'||  msg[i] == ',' ||  msg[i] == '.'    ){
-    for (j=0; msg[j]!= '\0';j++){
-        msg[i]= msg[i+1];
+    for (j=i; msg[j]!= '\0';j++){
+        msg[j]= msg[j+1];
     }
+    i--;
   }
   i++;
 }
