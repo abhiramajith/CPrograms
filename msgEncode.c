@@ -14,16 +14,18 @@ int main(void)
   /* write your answer here */
   int i=0;
   int x ;
+  int temp;
   while (msg[i]!= '\0'){
     if (msg[i] >= 'a' && msg[i]<= 'z'){
     x=  msg[i] - 'a';
     msg[i]=perm[x];
     }
 
-    if (msg[i] >= 'A' && msg[i]<= 'Z'){
+    else if (msg[i] >= 'A' && msg[i]<= 'Z'){
     x=  msg[i] - 'A';
-    perm[x]+= 'A'-'a';
-    msg[i]=perm[x];
+    temp = x;
+    perm[temp]+= 'A'-'a';
+    msg[i]=perm[temp];
     }
     i++;
   }
