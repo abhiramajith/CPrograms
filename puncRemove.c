@@ -9,9 +9,12 @@ int main(void)
 
   /* write your solution here ... */
   int i = 0;
+  int j;
 while (msg[i]!= '\0'){
   if (msg[i] == '!' || msg[i] == '`' ||  msg[i] == '?' ||  msg[i] == ';' || msg[i] == ':'||  msg[i] == ',' ||  msg[i] == '.'    ){
-    msg[i]= msg[i+1];
+    for (j=0; msg[j]!= '\0';j++){
+        msg[i]= msg[i+1];
+    }
   }
   i++;
 }
